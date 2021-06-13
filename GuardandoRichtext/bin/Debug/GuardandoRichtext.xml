@@ -1,0 +1,151 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GuardandoRichtext
+</name>
+</assembly>
+<members>
+<member name="T:GuardandoRichtext.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:GuardandoRichtext.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:GuardandoRichtext.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.SP_tablaPrueba_EDICION_ACTUALIZARDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.SP_tablaPrueba_EDICION_ELIMINARDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.SP_tablaPrueba_EDICION_INSERTARDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.tablaPruebaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.SP_tablaPrueba_EDICION_ACTUALIZARRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.SP_tablaPrueba_EDICION_ELIMINARRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.SP_tablaPrueba_EDICION_INSERTARRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.tablaPruebaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.SP_tablaPrueba_EDICION_ACTUALIZARRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.SP_tablaPrueba_EDICION_ELIMINARRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.SP_tablaPrueba_EDICION_INSERTARRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1.tablaPruebaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1TableAdapters.SP_tablaPrueba_EDICION_ACTUALIZARTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1TableAdapters.SP_tablaPrueba_EDICION_ELIMINARTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1TableAdapters.SP_tablaPrueba_EDICION_INSERTARTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1TableAdapters.tablaPruebaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:GuardandoRichtext.DataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(GuardandoRichtext.DataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:GuardandoRichtext.DataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(GuardandoRichtext.DataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:GuardandoRichtext.DataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(GuardandoRichtext.DataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:GuardandoRichtext.DataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:GuardandoRichtext.DataSet1TableAdapters.TableAdapterManager.UpdateAll(GuardandoRichtext.DataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:GuardandoRichtext.DataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

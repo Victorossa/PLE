@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GeneradorCodigoBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tecn-bloque-codigo">
+    <Key>
+      <PropertyRef Name="BloqueID" />
+    </Key>
+    <Property Name="BloqueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TecnologiaID" Type="int" Nullable="false" />
+    <Property Name="NombreBloque" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Contenido" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tecn-tecnologias">
+    <Key>
+      <PropertyRef Name="TecnologiaID" />
+    </Key>
+    <Property Name="TecnologiaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreTecnologia" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tecn-bloque-codigo_tecn-tecnologias">
+    <End Role="tecn-tecnologias" Type="Self.tecn-tecnologias" Multiplicity="1" />
+    <End Role="tecn-bloque-codigo" Type="Self.tecn-bloque-codigo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tecn-tecnologias">
+        <PropertyRef Name="TecnologiaID" />
+      </Principal>
+      <Dependent Role="tecn-bloque-codigo">
+        <PropertyRef Name="TecnologiaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GeneradorCodigoBDModelStoreContainer">
+    <EntitySet Name="tecn-bloque-codigo" EntityType="Self.tecn-bloque-codigo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tecn-tecnologias" EntityType="Self.tecn-tecnologias" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tecn-bloque-codigo_tecn-tecnologias" Association="Self.FK_tecn-bloque-codigo_tecn-tecnologias">
+      <End Role="tecn-tecnologias" EntitySet="tecn-tecnologias" />
+      <End Role="tecn-bloque-codigo" EntitySet="tecn-bloque-codigo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

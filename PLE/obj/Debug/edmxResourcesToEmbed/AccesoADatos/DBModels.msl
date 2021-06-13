@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PLE_DBModelStoreContainer" CdmEntityContainer="DBModel">
+    <EntitySetMapping Name="ArchivoReplace">
+      <EntityTypeMapping TypeName="PLE_DBModel.ArchivoReplace">
+        <MappingFragment StoreEntitySet="ArchivoReplace">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ArchivoReplace1" ColumnName="ArchivoReplace" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampoComponentes">
+      <EntityTypeMapping TypeName="PLE_DBModel.CampoComponentes">
+        <MappingFragment StoreEntitySet="CampoComponentes">
+          <ScalarProperty Name="CampoComponenteID" ColumnName="CampoComponenteID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Prefijo" ColumnName="Prefijo" />
+          <ScalarProperty Name="Superior" ColumnName="Superior" />
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+          <ScalarProperty Name="Inferior" ColumnName="Inferior" />
+          <ScalarProperty Name="SeparadorCampos" ColumnName="SeparadorCampos" />
+          <ScalarProperty Name="MultiReplace" ColumnName="MultiReplace" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CamposDeTablas">
+      <EntityTypeMapping TypeName="PLE_DBModel.CamposDeTablas">
+        <MappingFragment StoreEntitySet="CamposDeTablas">
+          <ScalarProperty Name="CampoID" ColumnName="CampoID" />
+          <ScalarProperty Name="TablaID" ColumnName="TablaID" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="NombreCampo" ColumnName="NombreCampo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Componentes">
+      <EntityTypeMapping TypeName="PLE_DBModel.Componentes">
+        <MappingFragment StoreEntitySet="Componentes">
+          <ScalarProperty Name="ComponenteID" ColumnName="ComponenteID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+          <ScalarProperty Name="NombreComponente" ColumnName="NombreComponente" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="XTabla" ColumnName="XTabla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plantillas">
+      <EntityTypeMapping TypeName="PLE_DBModel.Plantillas">
+        <MappingFragment StoreEntitySet="Plantillas">
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+          <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+          <ScalarProperty Name="NombrePlantilla" ColumnName="NombrePlantilla" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="PLE_DBModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="ProductoID" ColumnName="ProductoID" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proyectos">
+      <EntityTypeMapping TypeName="PLE_DBModel.Proyectos">
+        <MappingFragment StoreEntitySet="Proyectos">
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="NombreProyecto" ColumnName="NombreProyecto" />
+          <ScalarProperty Name="CodigoGenerado" ColumnName="CodigoGenerado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProyectosYTecnologias">
+      <EntityTypeMapping TypeName="PLE_DBModel.ProyectosYTecnologias">
+        <MappingFragment StoreEntitySet="ProyectosYTecnologias">
+          <ScalarProperty Name="ProyectosYTecnologiasID" ColumnName="ProyectosYTecnologiasID" />
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroValorRequerimientos">
+      <EntityTypeMapping TypeName="PLE_DBModel.RegistroValorRequerimientos">
+        <MappingFragment StoreEntitySet="RegistroValorRequerimientos">
+          <ScalarProperty Name="RegistroValorRequerimientoID" ColumnName="RegistroValorRequerimientoID" />
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="Requerimiento" ColumnName="Requerimiento" />
+          <ScalarProperty Name="ValorRequerimiento" ColumnName="ValorRequerimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequerimientosPlantillas">
+      <EntityTypeMapping TypeName="PLE_DBModel.RequerimientosPlantillas">
+        <MappingFragment StoreEntitySet="RequerimientosPlantillas">
+          <ScalarProperty Name="RequerimientoPlantillaID" ColumnName="RequerimientoPlantillaID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+          <ScalarProperty Name="Enunciado" ColumnName="Enunciado" />
+          <ScalarProperty Name="Requerimiento" ColumnName="Requerimiento" />
+          <ScalarProperty Name="OrdenDePeticion" ColumnName="OrdenDePeticion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TablasDeProyecto">
+      <EntityTypeMapping TypeName="PLE_DBModel.TablasDeProyecto">
+        <MappingFragment StoreEntitySet="TablasDeProyecto">
+          <ScalarProperty Name="TablaID" ColumnName="TablaID" />
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="NombreTabla" ColumnName="NombreTabla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tecnologias">
+      <EntityTypeMapping TypeName="PLE_DBModel.Tecnologias">
+        <MappingFragment StoreEntitySet="Tecnologias">
+          <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+          <ScalarProperty Name="NombreTecnologia" ColumnName="NombreTecnologia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposDeCampos">
+      <EntityTypeMapping TypeName="PLE_DBModel.TiposDeCampos">
+        <MappingFragment StoreEntitySet="TiposDeCampos">
+          <ScalarProperty Name="TipoCampoID" ColumnName="TipoCampoID" />
+          <ScalarProperty Name="GrupoTiposID" ColumnName="GrupoTiposID" />
+          <ScalarProperty Name="NombreTipo" ColumnName="NombreTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TablasRelacionadas">
+      <EntityTypeMapping TypeName="PLE_DBModel.TablasRelacionadas">
+        <MappingFragment StoreEntitySet="TablasRelacionadas">
+          <ScalarProperty Name="RelacionTablasID" ColumnName="RelacionTablasID" />
+          <ScalarProperty Name="ID_TablaDependiente" ColumnName="ID_TablaDependiente" />
+          <ScalarProperty Name="ID_CampoDependiente" ColumnName="ID_CampoDependiente" />
+          <ScalarProperty Name="ID_TablaINDEPENDIENTE" ColumnName="ID_TablaINDEPENDIENTE" />
+          <ScalarProperty Name="ID_CampoINDEPENDIENTE" ColumnName="ID_CampoINDEPENDIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_ProyectosYTecnologias">
+      <EntityTypeMapping TypeName="PLE_DBModel.View_ProyectosYTecnologias">
+        <MappingFragment StoreEntitySet="View_ProyectosYTecnologias">
+          <ScalarProperty Name="NombreProyecto" ColumnName="NombreProyecto" />
+          <ScalarProperty Name="NombreTecnologia" ColumnName="NombreTecnologia" />
+          <ScalarProperty Name="NombrePlantilla" ColumnName="NombrePlantilla" />
+          <ScalarProperty Name="ProyectosYTecnologiasID" ColumnName="ProyectosYTecnologiasID" />
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ELIMINA_SEGUN_PROYECTO" FunctionName="PLE_DBModel.Store.ELIMINA_SEGUN_PROYECTO" />
+    <FunctionImportMapping FunctionImportName="SP_ArchivoReplace_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_ArchivoReplace_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_CampoComponentes_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID" FunctionName="PLE_DBModel.Store.SP_CampoComponentes_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_CampoComponentes_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID_Result">
+          <ScalarProperty Name="CampoComponenteID" ColumnName="CampoComponenteID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Prefijo" ColumnName="Prefijo" />
+          <ScalarProperty Name="Superior" ColumnName="Superior" />
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+          <ScalarProperty Name="Inferior" ColumnName="Inferior" />
+          <ScalarProperty Name="SeparadorCampos" ColumnName="SeparadorCampos" />
+          <ScalarProperty Name="MultiReplace" ColumnName="MultiReplace" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CampoComponentes_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_CampoComponentes_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_CampoComponentes_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_CampoComponentes_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_CampoComponentes_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_CampoComponentes_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_CampoComponentes_Segun_Plantilla_Tipo" FunctionName="PLE_DBModel.Store.SP_CampoComponentes_Segun_Plantilla_Tipo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_CampoComponentes_Segun_Plantilla_Tipo_Result">
+          <ScalarProperty Name="CampoComponenteID" ColumnName="CampoComponenteID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Prefijo" ColumnName="Prefijo" />
+          <ScalarProperty Name="Superior" ColumnName="Superior" />
+          <ScalarProperty Name="Sufijo" ColumnName="Sufijo" />
+          <ScalarProperty Name="Inferior" ColumnName="Inferior" />
+          <ScalarProperty Name="SeparadorCampos" ColumnName="SeparadorCampos" />
+          <ScalarProperty Name="MultiReplace" ColumnName="MultiReplace" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CamposDeTablas_BUSQUEDA_SEGUN_PARAMETRO_TablaID" FunctionName="PLE_DBModel.Store.SP_CamposDeTablas_BUSQUEDA_SEGUN_PARAMETRO_TablaID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_CamposDeTablas_BUSQUEDA_SEGUN_PARAMETRO_TablaID_Result">
+          <ScalarProperty Name="CampoID" ColumnName="CampoID" />
+          <ScalarProperty Name="TablaID" ColumnName="TablaID" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="NombreCampo" ColumnName="NombreCampo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CamposDeTablas_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_CamposDeTablas_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_CamposDeTablas_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_CamposDeTablas_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_CamposDeTablas_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_CamposDeTablas_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_CARGA_CONVENSIONES_USADAS" FunctionName="PLE_DBModel.Store.SP_CARGA_CONVENSIONES_USADAS" />
+    <FunctionImportMapping FunctionImportName="SP_CARGA_TECNOLOGIAS_APLICADAS_A_PROYECTO" FunctionName="PLE_DBModel.Store.SP_CARGA_TECNOLOGIAS_APLICADAS_A_PROYECTO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_CARGA_TECNOLOGIAS_APLICADAS_A_PROYECTO_Result">
+          <ScalarProperty Name="NombreProyecto" ColumnName="NombreProyecto" />
+          <ScalarProperty Name="NombreTecnologia" ColumnName="NombreTecnologia" />
+          <ScalarProperty Name="NombrePlantilla" ColumnName="NombrePlantilla" />
+          <ScalarProperty Name="ProyectosYTecnologiasID" ColumnName="ProyectosYTecnologiasID" />
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Componentes_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID" FunctionName="PLE_DBModel.Store.SP_Componentes_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_Componentes_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID_Result">
+          <ScalarProperty Name="ComponenteID" ColumnName="ComponenteID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+          <ScalarProperty Name="NombreComponente" ColumnName="NombreComponente" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="XTabla" ColumnName="XTabla" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Componentes_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_Componentes_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_Componentes_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_Componentes_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_Componentes_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_Componentes_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_ELIMINA_RegistroValorRequerimientos_SegunID" FunctionName="PLE_DBModel.Store.SP_ELIMINA_RegistroValorRequerimientos_SegunID" />
+    <FunctionImportMapping FunctionImportName="SP_GruposDeTiposDeDatos_BUSQUEDA_SEGUN_PARAMETRO_GrupoTiposID" FunctionName="PLE_DBModel.Store.SP_GruposDeTiposDeDatos_BUSQUEDA_SEGUN_PARAMETRO_GrupoTiposID" />
+    <FunctionImportMapping FunctionImportName="SP_GruposDeTiposDeDatos_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_GruposDeTiposDeDatos_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_GruposDeTiposDeDatos_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_GruposDeTiposDeDatos_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_GruposDeTiposDeDatos_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_GruposDeTiposDeDatos_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_Plantillas_BUSQUEDA_SEGUN_PARAMETRO_Tecnologia" FunctionName="PLE_DBModel.Store.SP_Plantillas_BUSQUEDA_SEGUN_PARAMETRO_Tecnologia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_Plantillas_BUSQUEDA_SEGUN_PARAMETRO_Tecnologia_Result">
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+          <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+          <ScalarProperty Name="NombrePlantilla" ColumnName="NombrePlantilla" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Plantillas_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_Plantillas_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_Plantillas_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_Plantillas_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_Plantillas_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_Plantillas_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_Proyectos_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_Proyectos_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_Proyectos_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_Proyectos_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_Proyectos_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_Proyectos_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_ProyectosYTecnologias_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_ProyectosYTecnologias_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_RegistroValorRequerimientos_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_RegistroValorRequerimientos_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_RegistroValorRequerimientos_SEGUN_ProyectoID" FunctionName="PLE_DBModel.Store.SP_RegistroValorRequerimientos_SEGUN_ProyectoID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_RegistroValorRequerimientos_SEGUN_ProyectoID_Result">
+          <ScalarProperty Name="RegistroValorRequerimientoID" ColumnName="RegistroValorRequerimientoID" />
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="Requerimiento" ColumnName="Requerimiento" />
+          <ScalarProperty Name="ValorRequerimiento" ColumnName="ValorRequerimiento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_RegistroValorRequerimientos_SegunProyectoRequerimiento" FunctionName="PLE_DBModel.Store.SP_RegistroValorRequerimientos_SegunProyectoRequerimiento">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_RegistroValorRequerimientos_SegunProyectoRequerimiento_Result">
+          <ScalarProperty Name="RegistroValorRequerimientoID" ColumnName="RegistroValorRequerimientoID" />
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="Requerimiento" ColumnName="Requerimiento" />
+          <ScalarProperty Name="ValorRequerimiento" ColumnName="ValorRequerimiento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_RequerimientosPlantillas_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID" FunctionName="PLE_DBModel.Store.SP_RequerimientosPlantillas_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_RequerimientosPlantillas_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID_Result">
+          <ScalarProperty Name="RequerimientoPlantillaID" ColumnName="RequerimientoPlantillaID" />
+          <ScalarProperty Name="PlantillaID" ColumnName="PlantillaID" />
+          <ScalarProperty Name="Enunciado" ColumnName="Enunciado" />
+          <ScalarProperty Name="Requerimiento" ColumnName="Requerimiento" />
+          <ScalarProperty Name="OrdenDePeticion" ColumnName="OrdenDePeticion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_RequerimientosPlantillas_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_RequerimientosPlantillas_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_RequerimientosPlantillas_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_RequerimientosPlantillas_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_RequerimientosPlantillas_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_RequerimientosPlantillas_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_TablasDeProyecto_BUSQUEDA_SEGUN_PARAMETRO_ProyectoID" FunctionName="PLE_DBModel.Store.SP_TablasDeProyecto_BUSQUEDA_SEGUN_PARAMETRO_ProyectoID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_TablasDeProyecto_BUSQUEDA_SEGUN_PARAMETRO_ProyectoID_Result">
+          <ScalarProperty Name="TablaID" ColumnName="TablaID" />
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="NombreTabla" ColumnName="NombreTabla" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TablasDeProyecto_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_TablasDeProyecto_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_TablasDeProyecto_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_TablasDeProyecto_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_TablasDeProyecto_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_TablasDeProyecto_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_Tecnologias_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_Tecnologias_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_Tecnologias_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_Tecnologias_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_Tecnologias_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_Tecnologias_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="SP_TiposDeCampos_BUSQUEDA_SEGUN_PARAMETRO_GrupoTiposID" FunctionName="PLE_DBModel.Store.SP_TiposDeCampos_BUSQUEDA_SEGUN_PARAMETRO_GrupoTiposID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PLE_DBModel.SP_TiposDeCampos_BUSQUEDA_SEGUN_PARAMETRO_GrupoTiposID_Result">
+          <ScalarProperty Name="TipoCampoID" ColumnName="TipoCampoID" />
+          <ScalarProperty Name="GrupoTiposID" ColumnName="GrupoTiposID" />
+          <ScalarProperty Name="NombreTipo" ColumnName="NombreTipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TiposDeCampos_EDICION_ACTUALIZAR" FunctionName="PLE_DBModel.Store.SP_TiposDeCampos_EDICION_ACTUALIZAR" />
+    <FunctionImportMapping FunctionImportName="SP_TiposDeCampos_EDICION_ELIMINAR" FunctionName="PLE_DBModel.Store.SP_TiposDeCampos_EDICION_ELIMINAR" />
+    <FunctionImportMapping FunctionImportName="SP_TiposDeCampos_EDICION_INSERTAR" FunctionName="PLE_DBModel.Store.SP_TiposDeCampos_EDICION_INSERTAR" />
+    <FunctionImportMapping FunctionImportName="TruncateReplace" FunctionName="PLE_DBModel.Store.TruncateReplace" />
+  </EntityContainerMapping>
+</Mapping>

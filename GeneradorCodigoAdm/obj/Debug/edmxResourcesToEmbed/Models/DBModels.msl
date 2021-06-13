@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GeneradorCodigoBDModelStoreContainer" CdmEntityContainer="DBModel">
+    <EntitySetMapping Name="tecn_tecnologias">
+      <EntityTypeMapping TypeName="GeneradorCodigoBDModel.tecn_tecnologias">
+        <MappingFragment StoreEntitySet="tecn-tecnologias">
+          <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+          <ScalarProperty Name="NombreTecnologia" ColumnName="NombreTecnologia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tecn_bloque_codigo">
+      <EntityTypeMapping TypeName="GeneradorCodigoBDModel.tecn_bloque_codigo">
+        <MappingFragment StoreEntitySet="tecn-bloque-codigo">
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+          <ScalarProperty Name="NombreBloque" ColumnName="NombreBloque" />
+          <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+          <ScalarProperty Name="BloqueID" ColumnName="BloqueID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

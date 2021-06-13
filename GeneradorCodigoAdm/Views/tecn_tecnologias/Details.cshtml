@@ -1,0 +1,26 @@
+﻿@model GeneradorCodigoAdm.Models.tecn_tecnologias
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tecn_tecnologias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreTecnologia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreTecnologia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TecnologiaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

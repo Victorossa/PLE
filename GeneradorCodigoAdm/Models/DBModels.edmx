@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GeneradorCodigoBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tecn-bloque-codigo">
+          <Key>
+            <PropertyRef Name="BloqueID" />
+          </Key>
+          <Property Name="BloqueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TecnologiaID" Type="int" Nullable="false" />
+          <Property Name="NombreBloque" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Contenido" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tecn-tecnologias">
+          <Key>
+            <PropertyRef Name="TecnologiaID" />
+          </Key>
+          <Property Name="TecnologiaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreTecnologia" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tecn-bloque-codigo_tecn-tecnologias">
+          <End Role="tecn-tecnologias" Type="Self.tecn-tecnologias" Multiplicity="1" />
+          <End Role="tecn-bloque-codigo" Type="Self.tecn-bloque-codigo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tecn-tecnologias">
+              <PropertyRef Name="TecnologiaID" />
+            </Principal>
+            <Dependent Role="tecn-bloque-codigo">
+              <PropertyRef Name="TecnologiaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GeneradorCodigoBDModelStoreContainer">
+          <EntitySet Name="tecn-bloque-codigo" EntityType="Self.tecn-bloque-codigo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tecn-tecnologias" EntityType="Self.tecn-tecnologias" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tecn-bloque-codigo_tecn-tecnologias" Association="Self.FK_tecn-bloque-codigo_tecn-tecnologias">
+            <End Role="tecn-tecnologias" EntitySet="tecn-tecnologias" />
+            <End Role="tecn-bloque-codigo" EntitySet="tecn-bloque-codigo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GeneradorCodigoBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tecn_tecnologias">
+          <Key>
+            <PropertyRef Name="TecnologiaID" />
+          </Key>
+          <Property Name="TecnologiaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreTecnologia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tecn_bloque_codigo" Relationship="GeneradorCodigoBDModel.FK_tecn_bloque_codigo_tecn_tecnologias" FromRole="tecn_tecnologias" ToRole="tecn_bloque_codigo" />
+        </EntityType>
+        <EntityContainer Name="DBModel" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tecn_tecnologias" EntityType="Self.tecn_tecnologias" />
+          <EntitySet Name="tecn_bloque_codigo" EntityType="GeneradorCodigoBDModel.tecn_bloque_codigo" />
+          <AssociationSet Name="FK_tecn_bloque_codigo_tecn_tecnologias" Association="GeneradorCodigoBDModel.FK_tecn_bloque_codigo_tecn_tecnologias">
+            <End Role="tecn_tecnologias" EntitySet="tecn_tecnologias" />
+            <End Role="tecn_bloque_codigo" EntitySet="tecn_bloque_codigo" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tecn_bloque_codigo">
+          <Key>
+            <PropertyRef Name="BloqueID" />
+          </Key>
+          <Property Name="BloqueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TecnologiaID" Type="Int32" Nullable="false" />
+          <Property Name="NombreBloque" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Contenido" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tecn_tecnologias" Relationship="GeneradorCodigoBDModel.FK_tecn_bloque_codigo_tecn_tecnologias" FromRole="tecn_bloque_codigo" ToRole="tecn_tecnologias" />
+        </EntityType>
+        <Association Name="FK_tecn_bloque_codigo_tecn_tecnologias">
+          <End Type="GeneradorCodigoBDModel.tecn_tecnologias" Role="tecn_tecnologias" Multiplicity="1" />
+          <End Type="GeneradorCodigoBDModel.tecn_bloque_codigo" Role="tecn_bloque_codigo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tecn_tecnologias">
+              <PropertyRef Name="TecnologiaID" />
+            </Principal>
+            <Dependent Role="tecn_bloque_codigo">
+              <PropertyRef Name="TecnologiaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GeneradorCodigoBDModelStoreContainer" CdmEntityContainer="DBModel">
+          <EntitySetMapping Name="tecn_tecnologias">
+            <EntityTypeMapping TypeName="GeneradorCodigoBDModel.tecn_tecnologias">
+              <MappingFragment StoreEntitySet="tecn-tecnologias">
+                <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+                <ScalarProperty Name="NombreTecnologia" ColumnName="NombreTecnologia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tecn_bloque_codigo">
+            <EntityTypeMapping TypeName="GeneradorCodigoBDModel.tecn_bloque_codigo">
+              <MappingFragment StoreEntitySet="tecn-bloque-codigo">
+                <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+                <ScalarProperty Name="NombreBloque" ColumnName="NombreBloque" />
+                <ScalarProperty Name="TecnologiaID" ColumnName="TecnologiaID" />
+                <ScalarProperty Name="BloqueID" ColumnName="BloqueID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

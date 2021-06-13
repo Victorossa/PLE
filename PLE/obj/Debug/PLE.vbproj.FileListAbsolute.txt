@@ -1,0 +1,63 @@
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\BaseDeDatos\PLE_DB.mdf
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\BaseDeDatos\PLE_DB_log.ldf
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\PLE_DB.mdf
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\PLE_DB_log.ldf
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\PLE.exe.config
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\PLE.exe
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\PLE.pdb
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\PLE.xml
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\EntityFramework.dll
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\EntityFramework.SqlServer.dll
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\EntityFramework.xml
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\bin\Debug\EntityFramework.SqlServer.xml
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.vbprojAssemblyReference.cache
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.FrmGeneracionDeProyectos.resources
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.FrmInicio.resources
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.FrmPlantillas.resources
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.Resources.resources
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.vbproj.GenerateResource.cache
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.vbproj.CoreCompileInputs.cache
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.vbproj.CopyComplete
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.exe
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.xml
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\PLE\obj\Debug\PLE.pdb
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\PLE_DB.mdf
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\PLE_DB_log.ldf
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\PLE.exe.config
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\PLE.exe
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\PLE.pdb
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\PLE.xml
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\EntityFramework.dll
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\EntityFramework.SqlServer.dll
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\EntityFramework.xml
+C:\www\Copia GenCodigo\GenCodigo\PLE\bin\Debug\EntityFramework.SqlServer.xml
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.vbprojAssemblyReference.cache
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.Resources.resources
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.vbproj.GenerateResource.cache
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.vbproj.CoreCompileInputs.cache
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.vbproj.CopyComplete
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.exe
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.xml
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.pdb
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.FrmTecnologias.resources
+C:\www\Copia GenCodigo\GenCodigo\PLE\obj\Debug\PLE.FrmInicio.resources
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\PLE_DB.mdf
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\PLE_DB_log.ldf
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\PLE.exe.config
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\PLE.exe
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\PLE.pdb
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\PLE.xml
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\EntityFramework.dll
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\EntityFramework.xml
+C:\Proyecto PLE\GenCodigo\PLE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.vbprojAssemblyReference.cache
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.FrmInicio.resources
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.FrmTecnologias.resources
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.Resources.resources
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.vbproj.GenerateResource.cache
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.vbproj.CoreCompileInputs.cache
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.vbproj.CopyComplete
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.exe
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.xml
+C:\Proyecto PLE\GenCodigo\PLE\obj\Debug\PLE.pdb

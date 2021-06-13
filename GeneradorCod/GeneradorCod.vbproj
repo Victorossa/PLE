@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7F1BCBF-31C4-49C2-A278-D157E407C3CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>GeneradorCod.My.MyApplication</StartupObject>
+    <RootNamespace>GeneradorCod</RootNamespace>
+    <AssemblyName>GeneradorCod</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GeneradorCod.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GeneradorCod.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cache_32x32-32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.13.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Tecnologias.vb" />
+    <Compile Include="Data\AccesoDatos.vb" />
+    <Compile Include="Data\DataSetAdministracion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAdministracion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSetAdministracion.vb">
+      <DependentUpon>DataSetAdministracion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSetReportes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSetTablasYCampos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTablasYCampos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSetTablasYCampos.vb">
+      <DependentUpon>DataSetTablasYCampos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProcesamientoTexto.vb" />
+    <Compile Include="Data\RecursosPle.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecursosPle.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormularioPruebas.Designer.vb">
+      <DependentUpon>FormularioPruebas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormularioPruebas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmConfiguracion.Designer.vb">
+      <DependentUpon>FrmConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEdicionCampos.Designer.vb">
+      <DependentUpon>FrmEdicionCampos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEdicionCampos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmGeneracionProyectos.Designer.vb">
+      <DependentUpon>FrmGeneracionProyectos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmGeneracionProyectos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmInicio.Designer.vb">
+      <DependentUpon>FrmInicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmInicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFactoryDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyFactoryDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\DataSets\DataSetMaestros.vb">
+      <DependentUpon>DataSetMaestros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmNewReplace.Designer.vb">
+      <DependentUpon>FrmNewReplace.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmNewReplace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReplace.Designer.vb">
+      <DependentUpon>FrmReplace.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReplace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmSeleccionDeArchivosParaIntegracion.Designer.vb">
+      <DependentUpon>FrmSeleccionDeArchivosParaIntegracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmSeleccionDeArchivosParaIntegracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTecnologias.Designer.vb">
+      <DependentUpon>FrmTecnologias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTecnologias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmUtilidades.Designer.vb">
+      <DependentUpon>FrmUtilidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmUtilidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes.Designer.vb">
+      <DependentUpon>Reportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloReplace.vb" />
+    <Compile Include="Modulos\TratamientoText.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MyFactoryDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyFactoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\DataSets\DataSetConfiguracion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetConfiguracion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\DataSets\DataSetMaestros.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMaestros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmNewInicio.Designer.vb">
+      <DependentUpon>FrmNewInicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmNewInicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmPlantillasTecnologiasYComponentes.Designer.vb">
+      <DependentUpon>FrmPlantillasTecnologiasYComponentes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmPlantillasTecnologiasYComponentes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmPleCliente.Designer.vb">
+      <DependentUpon>FrmPleCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmPleCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmPleEmpresa.Designer.vb">
+      <DependentUpon>FrmPleEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmPleEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmPleTiposDocumentos.Designer.vb">
+      <DependentUpon>FrmPleTiposDocumentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewPle\Formularios\FrmPleTiposDocumentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\RecursosNewReplace.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecursosNewReplace.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\RecursosPle.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RecursosPle.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormularioPruebas.resx">
+      <DependentUpon>FormularioPruebas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmConfiguracion.resx">
+      <DependentUpon>FrmConfiguracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEdicionCampos.resx">
+      <DependentUpon>FrmEdicionCampos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmGeneracionProyectos.resx">
+      <DependentUpon>FrmGeneracionProyectos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmInicio.resx">
+      <DependentUpon>FrmInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPle\Formularios\FrmNewReplace.resx">
+      <DependentUpon>FrmNewReplace.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReplace.resx">
+      <DependentUpon>FrmReplace.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmSeleccionDeArchivosParaIntegracion.resx">
+      <DependentUpon>FrmSeleccionDeArchivosParaIntegracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTecnologias.resx">
+      <DependentUpon>FrmTecnologias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmUtilidades.resx">
+      <DependentUpon>FrmUtilidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes.resx">
+      <DependentUpon>Reportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPle\Formularios\FrmNewInicio.resx">
+      <DependentUpon>FrmNewInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPle\Formularios\FrmPlantillasTecnologiasYComponentes.resx">
+      <DependentUpon>FrmPlantillasTecnologiasYComponentes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPle\Formularios\FrmPleCliente.resx">
+      <DependentUpon>FrmPleCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPle\Formularios\FrmPleEmpresa.resx">
+      <DependentUpon>FrmPleEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPle\Formularios\FrmPleTiposDocumentos.resx">
+      <DependentUpon>FrmPleTiposDocumentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPle\Reportes\ContenidoCodigo.rdlc" />
+    <EmbeddedResource Include="NewPle\Reportes\DetallesAplicacion.rdlc" />
+    <EmbeddedResource Include="NewPle\Reportes\ReporteEstimacion.rdlc" />
+    <EmbeddedResource Include="NewPle\Reportes\TecnologiasAplicadas.rdlc" />
+    <EmbeddedResource Include="Recursos\RecursosNewReplace.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RecursosNewReplace.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\DataSetAdministracion.xsc">
+      <DependentUpon>DataSetAdministracion.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetAdministracion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAdministracion.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DataSetAdministracion.xss">
+      <DependentUpon>DataSetAdministracion.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetReportes.xsc">
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReportes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DataSetReportes.xss">
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetTablasYCampos.xsc">
+      <DependentUpon>DataSetTablasYCampos.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSetTablasYCampos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTablasYCampos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DataSetTablasYCampos.xss">
+      <DependentUpon>DataSetTablasYCampos.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyFactoryDataSet.xsc">
+      <DependentUpon>MyFactoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyFactoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyFactoryDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyFactoryDataSet.xss">
+      <DependentUpon>MyFactoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyFactoryDataSet1.xsc">
+      <DependentUpon>MyFactoryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MyFactoryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyFactoryDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyFactoryDataSet1.xss">
+      <DependentUpon>MyFactoryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NewPle\DataSets\DataSetConfiguracion.xsc">
+      <DependentUpon>DataSetConfiguracion.xsd</DependentUpon>
+    </None>
+    <None Include="NewPle\DataSets\DataSetConfiguracion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetConfiguracion.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="NewPle\DataSets\DataSetConfiguracion.xss">
+      <DependentUpon>DataSetConfiguracion.xsd</DependentUpon>
+    </None>
+    <None Include="NewPle\DataSets\DataSetMaestros.xsc">
+      <DependentUpon>DataSetMaestros.xsd</DependentUpon>
+    </None>
+    <None Include="NewPle\DataSets\DataSetMaestros.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMaestros.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="NewPle\DataSets\DataSetMaestros.xss">
+      <DependentUpon>DataSetMaestros.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cache_32x32-32.ico" />
+    <Content Include="Recursos\FondoPLE0.jpg" />
+    <Content Include="Recursos\FondoPLE1.jpg" />
+    <Content Include="Recursos\FondoPLE2.jpg" />
+    <Content Include="Recursos\FondoPLE3.jpg" />
+    <Content Include="Recursos\FondoPLE4.jpg" />
+    <None Include="Resources\Salir.jpg" />
+    <None Include="Resources\Icono cerrar FN.png" />
+    <None Include="Resources\Icono Maximizar.png" />
+    <None Include="Resources\Icono Minimizar.png" />
+    <None Include="Resources\Icono Restaurar.png" />
+    <None Include="Resources\Mobile-Menu-Icon.png" />
+    <None Include="Resources\logo.PNG" />
+    <None Include="Resources\Logos-Google-Code-icon.png" />
+    <None Include="Resources\Logos-Google-Code-icon %281%29.png" />
+    <None Include="Resources\Mimetype-vcalendar-icon.png" />
+    <None Include="Resources\table-replace-icon.png" />
+    <None Include="Resources\table-relationship-icon.png" />
+    <None Include="Resources\Graphic-designer-icon.png" />
+    <None Include="Resources\technology-icon.png" />
+    <None Include="Resources\Actions-go-previous-icon.png" />
+    <None Include="Resources\Arrow-icon.png" />
+    <None Include="Resources\Arrow-icon1.png" />
+    <None Include="Resources\table-replace-icon1.png" />
+    <None Include="Resources\Preview-icon.png" />
+    <None Include="Resources\Data-Generic-Sorting-2-icon.png" />
+    <None Include="Resources\Settings-icon.png" />
+    <None Include="Resources\Envato-icon.png" />
+    <None Include="Resources\Envato-icon %281%29.png" />
+    <None Include="Resources\supplies-icon.png" />
+    <None Include="Resources\Yahoo-Widget-Engine-icon.png" />
+    <None Include="Resources\Play-1-Hot-icon.png" />
+    <None Include="Resources\Misc-Delete-Database-icon.png" />
+    <None Include="Resources\Apps-Run-icon.png" />
+    <None Include="Resources\accept-database-icon.png" />
+    <None Include="Resources\Mimetype-vcalendar-icon1.png" />
+    <None Include="Resources\preferences-desktop-default-applications-icon.png" />
+    <None Include="Resources\technology-icon1.png" />
+    <None Include="Resources\Actions-project-development-new-template-icon.png" />
+    <None Include="Resources\My-Documents-icon.png" />
+    <None Include="Resources\Places-folder-icon.png" />
+    <None Include="Resources\folder-documents-icon.png" />
+    <None Include="Resources\Download-icon.png" />
+    <None Include="Resources\eye-icon.png" />
+    <None Include="Resources\Actions-edit-copy-icon.png" />
+    <None Include="Resources\Type-icon.png" />
+    <None Include="Resources\File-AI-icon.png" />
+    <None Include="Resources\android-icon.png" />
+    <None Include="Resources\File-Delete-icon.png" />
+    <None Include="Resources\Button-Close-icon.png" />
+    <None Include="Resources\App-lists-icon.png" />
+    <None Include="Resources\Copy-icon.png" />
+    <None Include="Resources\tape-measure-icon.png" />
+    <None Include="Resources\Product-documentation-icon %281%29.png" />
+    <None Include="Resources\technology-icon3.png" />
+    <None Include="Resources\My-Pictures-icon.png" />
+    <None Include="Resources\Reports-icon.png" />
+    <None Include="Resources\university-icon.png" />
+    <None Include="Resources\System-Security-Card-icon.png" />
+    <None Include="Resources\System-pictures-icon.png" />
+    <None Include="Resources\Factory-2-icon.png" />
+    <None Include="Resources\Industry-Circuit-icon.png" />
+    <None Include="Resources\Anki-icon.png" />
+    <None Include="Resources\My-Documents-icon1.png" />
+    <None Include="Resources\database-icon.png" />
+    <None Include="Resources\My-Documents-icon2.png" />
+    <None Include="Resources\Action-run-icon.png" />
+    <None Include="Resources\System-pictures-icon1.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\81 at blue canvas right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+</Project>

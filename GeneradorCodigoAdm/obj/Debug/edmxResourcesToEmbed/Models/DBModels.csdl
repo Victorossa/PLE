@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GeneradorCodigoBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tecn_tecnologias">
+    <Key>
+      <PropertyRef Name="TecnologiaID" />
+    </Key>
+    <Property Name="TecnologiaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreTecnologia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tecn_bloque_codigo" Relationship="GeneradorCodigoBDModel.FK_tecn_bloque_codigo_tecn_tecnologias" FromRole="tecn_tecnologias" ToRole="tecn_bloque_codigo" />
+  </EntityType>
+  <EntityContainer Name="DBModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tecn_tecnologias" EntityType="Self.tecn_tecnologias" />
+    <EntitySet Name="tecn_bloque_codigo" EntityType="GeneradorCodigoBDModel.tecn_bloque_codigo" />
+    <AssociationSet Name="FK_tecn_bloque_codigo_tecn_tecnologias" Association="GeneradorCodigoBDModel.FK_tecn_bloque_codigo_tecn_tecnologias">
+      <End Role="tecn_tecnologias" EntitySet="tecn_tecnologias" />
+      <End Role="tecn_bloque_codigo" EntitySet="tecn_bloque_codigo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tecn_bloque_codigo">
+    <Key>
+      <PropertyRef Name="BloqueID" />
+    </Key>
+    <Property Name="BloqueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TecnologiaID" Type="Int32" Nullable="false" />
+    <Property Name="NombreBloque" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Contenido" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tecn_tecnologias" Relationship="GeneradorCodigoBDModel.FK_tecn_bloque_codigo_tecn_tecnologias" FromRole="tecn_bloque_codigo" ToRole="tecn_tecnologias" />
+  </EntityType>
+  <Association Name="FK_tecn_bloque_codigo_tecn_tecnologias">
+    <End Type="GeneradorCodigoBDModel.tecn_tecnologias" Role="tecn_tecnologias" Multiplicity="1" />
+    <End Type="GeneradorCodigoBDModel.tecn_bloque_codigo" Role="tecn_bloque_codigo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tecn_tecnologias">
+        <PropertyRef Name="TecnologiaID" />
+      </Principal>
+      <Dependent Role="tecn_bloque_codigo">
+        <PropertyRef Name="TecnologiaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

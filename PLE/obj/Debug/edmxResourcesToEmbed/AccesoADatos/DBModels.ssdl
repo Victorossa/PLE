@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PLE_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ArchivoReplace">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArchivoReplace" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CampoComponentes">
+    <Key>
+      <PropertyRef Name="CampoComponenteID" />
+    </Key>
+    <Property Name="CampoComponenteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlantillaID" Type="int" Nullable="false" />
+    <Property Name="Tipo" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Prefijo" Type="varchar" MaxLength="200" />
+    <Property Name="Superior" Type="varchar" MaxLength="200" />
+    <Property Name="Sufijo" Type="varchar" MaxLength="200" />
+    <Property Name="Inferior" Type="varchar" MaxLength="200" />
+    <Property Name="SeparadorCampos" Type="varchar" MaxLength="50" />
+    <Property Name="MultiReplace" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="CamposDeTablas">
+    <Key>
+      <PropertyRef Name="CampoID" />
+    </Key>
+    <Property Name="CampoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TablaID" Type="int" Nullable="false" />
+    <Property Name="Tipo" Type="varchar" MaxLength="100" />
+    <Property Name="NombreCampo" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Componentes">
+    <Key>
+      <PropertyRef Name="ComponenteID" />
+    </Key>
+    <Property Name="ComponenteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlantillaID" Type="int" Nullable="false" />
+    <Property Name="NombreComponente" Type="varchar" MaxLength="500" />
+    <Property Name="Codigo" Type="varchar(max)" Nullable="false" />
+    <Property Name="XTabla" Type="bit" />
+  </EntityType>
+  <EntityType Name="Plantillas">
+    <Key>
+      <PropertyRef Name="PlantillaID" />
+    </Key>
+    <Property Name="PlantillaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TecnologiaID" Type="int" Nullable="false" />
+    <Property Name="NombrePlantilla" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Orden" Type="int" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="ProductoID" />
+    </Key>
+    <Property Name="ProductoID" Type="int" Nullable="false" />
+    <Property Name="NombreProducto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NombreCategoria" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proyectos">
+    <Key>
+      <PropertyRef Name="ProyectoID" />
+    </Key>
+    <Property Name="ProyectoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreProyecto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CodigoGenerado" Type="varchar(max)" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ProyectosYTecnologias">
+    <Key>
+      <PropertyRef Name="ProyectosYTecnologiasID" />
+    </Key>
+    <Property Name="ProyectosYTecnologiasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProyectoID" Type="int" Nullable="false" />
+    <Property Name="TecnologiaID" Type="int" Nullable="false" />
+    <Property Name="PlantillaID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistroValorRequerimientos">
+    <Key>
+      <PropertyRef Name="RegistroValorRequerimientoID" />
+    </Key>
+    <Property Name="RegistroValorRequerimientoID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProyectoID" Type="int" Nullable="false" />
+    <Property Name="Requerimiento" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ValorRequerimiento" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RequerimientosPlantillas">
+    <Key>
+      <PropertyRef Name="RequerimientoPlantillaID" />
+    </Key>
+    <Property Name="RequerimientoPlantillaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlantillaID" Type="int" Nullable="false" />
+    <Property Name="Enunciado" Type="varchar" MaxLength="500" />
+    <Property Name="Requerimiento" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="OrdenDePeticion" Type="int" />
+  </EntityType>
+  <EntityType Name="TablasDeProyecto">
+    <Key>
+      <PropertyRef Name="TablaID" />
+    </Key>
+    <Property Name="TablaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProyectoID" Type="int" Nullable="false" />
+    <Property Name="NombreTabla" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'C:\WWW\GENCODIGO\GENCODIGOCONBD\GENCODIGO\PLE\PLE_DB.MDF.dbo.TablasRelacionadas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TablasRelacionadas">
+    <Key>
+      <PropertyRef Name="RelacionTablasID" />
+      <PropertyRef Name="ID_TablaDependiente" />
+      <PropertyRef Name="ID_CampoDependiente" />
+      <PropertyRef Name="ID_TablaINDEPENDIENTE" />
+      <PropertyRef Name="ID_CampoINDEPENDIENTE" />
+    </Key>
+    <Property Name="RelacionTablasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_TablaDependiente" Type="int" Nullable="false" />
+    <Property Name="ID_CampoDependiente" Type="int" Nullable="false" />
+    <Property Name="ID_TablaINDEPENDIENTE" Type="int" Nullable="false" />
+    <Property Name="ID_CampoINDEPENDIENTE" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tecnologias">
+    <Key>
+      <PropertyRef Name="TecnologiaID" />
+    </Key>
+    <Property Name="TecnologiaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreTecnologia" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TiposDeCampos">
+    <Key>
+      <PropertyRef Name="TipoCampoID" />
+    </Key>
+    <Property Name="TipoCampoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GrupoTiposID" Type="int" Nullable="false" />
+    <Property Name="NombreTipo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'C:\WWW\GENCODIGO\GENCODIGOCONBD\GENCODIGO\PLE\PLE_DB.MDF.dbo.View_ProyectosYTecnologias' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="View_ProyectosYTecnologias">
+    <Key>
+      <PropertyRef Name="NombreProyecto" />
+      <PropertyRef Name="NombreTecnologia" />
+      <PropertyRef Name="NombrePlantilla" />
+      <PropertyRef Name="ProyectosYTecnologiasID" />
+      <PropertyRef Name="ProyectoID" />
+      <PropertyRef Name="TecnologiaID" />
+      <PropertyRef Name="PlantillaID" />
+    </Key>
+    <Property Name="NombreProyecto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NombreTecnologia" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NombrePlantilla" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProyectosYTecnologiasID" Type="int" Nullable="false" />
+    <Property Name="ProyectoID" Type="int" Nullable="false" />
+    <Property Name="TecnologiaID" Type="int" Nullable="false" />
+    <Property Name="PlantillaID" Type="int" Nullable="false" />
+  </EntityType>
+  <Function Name="ELIMINA_SEGUN_PROYECTO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+    <Parameter Name="TecnologiaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_ArchivoReplace_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ArchivoReplace" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_CampoComponentes_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_CampoComponentes_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CampoComponenteID" Type="int" Mode="In" />
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+    <Parameter Name="Prefijo" Type="varchar" Mode="In" />
+    <Parameter Name="Superior" Type="varchar" Mode="In" />
+    <Parameter Name="Sufijo" Type="varchar" Mode="In" />
+    <Parameter Name="Inferior" Type="varchar" Mode="In" />
+    <Parameter Name="SeparadorCampos" Type="varchar" Mode="In" />
+    <Parameter Name="MultiReplace" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_CampoComponentes_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CampoComponenteID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_CampoComponentes_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+    <Parameter Name="Prefijo" Type="varchar" Mode="In" />
+    <Parameter Name="Superior" Type="varchar" Mode="In" />
+    <Parameter Name="Sufijo" Type="varchar" Mode="In" />
+    <Parameter Name="Inferior" Type="varchar" Mode="In" />
+    <Parameter Name="SeparadorCampos" Type="varchar" Mode="In" />
+    <Parameter Name="MultiReplace" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_CampoComponentes_Segun_Plantilla_Tipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_CamposDeTablas_BUSQUEDA_SEGUN_PARAMETRO_TablaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TablaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_CamposDeTablas_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CampoID" Type="int" Mode="In" />
+    <Parameter Name="TablaID" Type="int" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+    <Parameter Name="NombreCampo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_CamposDeTablas_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CampoID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_CamposDeTablas_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TablaID" Type="int" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+    <Parameter Name="NombreCampo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_CARGA_CONVENSIONES_USADAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_CARGA_TECNOLOGIAS_APLICADAS_A_PROYECTO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Componentes_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Componentes_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ComponenteID" Type="int" Mode="In" />
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+    <Parameter Name="NombreComponente" Type="varchar" Mode="In" />
+    <Parameter Name="Codigo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="XTabla" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_Componentes_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ComponenteID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Componentes_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+    <Parameter Name="NombreComponente" Type="varchar" Mode="In" />
+    <Parameter Name="Codigo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="XTabla" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_ELIMINA_RegistroValorRequerimientos_SegunID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GruposDeTiposDeDatos_BUSQUEDA_SEGUN_PARAMETRO_GrupoTiposID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GrupoTiposID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GruposDeTiposDeDatos_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GrupoTiposID" Type="int" Mode="In" />
+    <Parameter Name="NombreGrupoTipoDeDato" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GruposDeTiposDeDatos_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GrupoTiposID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GruposDeTiposDeDatos_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NombreGrupoTipoDeDato" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_Plantillas_BUSQUEDA_SEGUN_PARAMETRO_Tecnologia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TecnologiaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Plantillas_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+    <Parameter Name="TecnologiaID" Type="int" Mode="In" />
+    <Parameter Name="NombrePlantilla" Type="varchar" Mode="In" />
+    <Parameter Name="Orden" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Plantillas_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Plantillas_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TecnologiaID" Type="int" Mode="In" />
+    <Parameter Name="NombrePlantilla" Type="varchar" Mode="In" />
+    <Parameter Name="Orden" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Proyectos_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+    <Parameter Name="NombreProyecto" Type="varchar" Mode="In" />
+    <Parameter Name="CodigoGenerado" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_Proyectos_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Proyectos_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NombreProyecto" Type="varchar" Mode="In" />
+    <Parameter Name="CodigoGenerado" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_ProyectosYTecnologias_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+    <Parameter Name="TecnologiaID" Type="int" Mode="In" />
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_RegistroValorRequerimientos_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+    <Parameter Name="Requerimiento" Type="varchar" Mode="In" />
+    <Parameter Name="ValorRequerimiento" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_RegistroValorRequerimientos_SEGUN_ProyectoID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_RegistroValorRequerimientos_SegunProyectoRequerimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+    <Parameter Name="Requerimiento" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_RequerimientosPlantillas_BUSQUEDA_SEGUN_PARAMETRO_PlantillaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_RequerimientosPlantillas_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RequerimientoPlantillaID" Type="int" Mode="In" />
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+    <Parameter Name="Enunciado" Type="varchar" Mode="In" />
+    <Parameter Name="Requerimiento" Type="varchar" Mode="In" />
+    <Parameter Name="OrdenDePeticion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_RequerimientosPlantillas_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RequerimientoPlantillaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_RequerimientosPlantillas_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlantillaID" Type="int" Mode="In" />
+    <Parameter Name="Enunciado" Type="varchar" Mode="In" />
+    <Parameter Name="Requerimiento" Type="varchar" Mode="In" />
+    <Parameter Name="OrdenDePeticion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_TablasDeProyecto_BUSQUEDA_SEGUN_PARAMETRO_ProyectoID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_TablasDeProyecto_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TablaID" Type="int" Mode="In" />
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+    <Parameter Name="NombreTabla" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_TablasDeProyecto_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TablaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_TablasDeProyecto_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProyectoID" Type="int" Mode="In" />
+    <Parameter Name="NombreTabla" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_Tecnologias_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TecnologiaID" Type="int" Mode="In" />
+    <Parameter Name="NombreTecnologia" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_Tecnologias_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TecnologiaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Tecnologias_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NombreTecnologia" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_TiposDeCampos_BUSQUEDA_SEGUN_PARAMETRO_GrupoTiposID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GrupoTiposID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_TiposDeCampos_EDICION_ACTUALIZAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoCampoID" Type="int" Mode="In" />
+    <Parameter Name="GrupoTiposID" Type="int" Mode="In" />
+    <Parameter Name="NombreTipo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_TiposDeCampos_EDICION_ELIMINAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoCampoID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_TiposDeCampos_EDICION_INSERTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GrupoTiposID" Type="int" Mode="In" />
+    <Parameter Name="NombreTipo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TruncateReplace" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="PLE_DBModelStoreContainer">
+    <EntitySet Name="ArchivoReplace" EntityType="Self.ArchivoReplace" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CampoComponentes" EntityType="Self.CampoComponentes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CamposDeTablas" EntityType="Self.CamposDeTablas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Componentes" EntityType="Self.Componentes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Plantillas" EntityType="Self.Plantillas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proyectos" EntityType="Self.Proyectos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProyectosYTecnologias" EntityType="Self.ProyectosYTecnologias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RegistroValorRequerimientos" EntityType="Self.RegistroValorRequerimientos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequerimientosPlantillas" EntityType="Self.RequerimientosPlantillas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TablasDeProyecto" EntityType="Self.TablasDeProyecto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tecnologias" EntityType="Self.Tecnologias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TiposDeCampos" EntityType="Self.TiposDeCampos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TablasRelacionadas" EntityType="Self.TablasRelacionadas" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TablasRelacionadas].[RelacionTablasID] AS [RelacionTablasID], 
+    [TablasRelacionadas].[ID_TablaDependiente] AS [ID_TablaDependiente], 
+    [TablasRelacionadas].[ID_CampoDependiente] AS [ID_CampoDependiente], 
+    [TablasRelacionadas].[ID_TablaINDEPENDIENTE] AS [ID_TablaINDEPENDIENTE], 
+    [TablasRelacionadas].[ID_CampoINDEPENDIENTE] AS [ID_CampoINDEPENDIENTE]
+    FROM [dbo].[TablasRelacionadas] AS [TablasRelacionadas]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_ProyectosYTecnologias" EntityType="Self.View_ProyectosYTecnologias" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_ProyectosYTecnologias].[NombreProyecto] AS [NombreProyecto], 
+    [View_ProyectosYTecnologias].[NombreTecnologia] AS [NombreTecnologia], 
+    [View_ProyectosYTecnologias].[NombrePlantilla] AS [NombrePlantilla], 
+    [View_ProyectosYTecnologias].[ProyectosYTecnologiasID] AS [ProyectosYTecnologiasID], 
+    [View_ProyectosYTecnologias].[ProyectoID] AS [ProyectoID], 
+    [View_ProyectosYTecnologias].[TecnologiaID] AS [TecnologiaID], 
+    [View_ProyectosYTecnologias].[PlantillaID] AS [PlantillaID]
+    FROM [dbo].[View_ProyectosYTecnologias] AS [View_ProyectosYTecnologias]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

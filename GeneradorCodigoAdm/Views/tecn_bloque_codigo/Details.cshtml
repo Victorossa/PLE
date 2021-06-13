@@ -1,0 +1,42 @@
+﻿@model GeneradorCodigoAdm.Models.tecn_bloque_codigo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tecn_bloque_codigo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreBloque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreBloque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contenido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contenido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tecn_tecnologias.NombreTecnologia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tecn_tecnologias.NombreTecnologia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BloqueID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

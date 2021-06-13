@@ -1,0 +1,35 @@
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.exe.config
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.exe
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.pdb
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.xml
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.vbprojAssemblyReference.cache
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.Form1.resources
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.Resources.resources
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.vbproj.GenerateResource.cache
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.vbproj.CoreCompileInputs.cache
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.exe
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.xml
+C:\www\GenCodigo\GenCodigoConBD\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.pdb
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.exe.config
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.exe
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.pdb
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.xml
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.Form1.resources
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.Resources.resources
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.vbproj.GenerateResource.cache
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.vbproj.CoreCompileInputs.cache
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.exe
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.xml
+C:\www\Copia GenCodigo\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.pdb
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.exe.config
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.exe
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.pdb
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\bin\Debug\GuardandoRichtext.xml
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.vbprojAssemblyReference.cache
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.Form1.resources
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.Resources.resources
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.vbproj.GenerateResource.cache
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.vbproj.CoreCompileInputs.cache
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.exe
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.xml
+C:\Proyecto PLE\GenCodigo\GuardandoRichtext\obj\Debug\GuardandoRichtext.pdb
